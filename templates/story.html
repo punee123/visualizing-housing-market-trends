@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-5 bg-light mt-5 border-bottom">
+    <div class="container py-4 text-center">
+        <h6 class="text-primary fw-bold text-uppercase tracking-wider mb-2">Market Narrative</h6>
+        <h2 class="fw-bold text-dark mb-3">The Housing Trends Story</h2>
+        <p class="text-muted mx-auto mb-0" style="max-width: 700px;">
+            A guided exploration of the data-driven journey—connecting property features, renovation history, and market value.
+        </p>
+    </div>
+</section>
+
+<section class="py-5 bg-light min-vh-100 position-relative">
+    <div class="floating-blob"></div>
+
+    <div class="container-fluid px-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-11">
+                
+                <div class="card shadow-lg border-0 presentation-card bg-white">
+                    <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom bg-light bg-opacity-50">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-circle bg-primary-soft shadow-sm" style="width: 40px; height: 40px;">
+                                <i class="fas fa-book-open text-primary"></i>
+                            </div>
+                            <h5 class="fw-bold m-0 text-dark" style="font-size: 1.1rem;">Interactive Storyboard</h5>
+                        </div>
+                        <button class="btn btn-sm btn-light border rounded-pill" onclick="location.reload()">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+
+                    <div id="tableauStory" style="width:100%; min-height: 820px; background: #fff;">
+                        </div>
+                </div>
+
+                <div class="row mt-5 g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="info-card p-4 bg-white shadow-sm">
+                            <i class="fas fa-layer-group text-primary fa-2x mb-3"></i>
+                            <h6 class="fw-bold">Navigate Tabs</h6>
+                            <p class="small text-muted mb-0">Use the boxes at the top of the viz to switch chapters.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-card p-4 bg-white shadow-sm">
+                            <i class="fas fa-mouse-pointer text-success fa-2x mb-3"></i>
+                            <h6 class="fw-bold">Interactive Viz</h6>
+                            <p class="small text-muted mb-0">Hover over any data point to reveal specific housing details.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-card p-4 bg-white shadow-sm">
+                            <i class="fas fa-expand-alt text-warning fa-2x mb-3"></i>
+                            <h6 class="fw-bold">Immersive View</h6>
+                            <p class="small text-muted mb-0">Use the full-screen button in the bottom right toolbar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 mb-5">
+                    <a href="/dashboard" class="btn btn-custom px-5">
+                        <i class="fas fa-arrow-left me-2"></i> Back to Analytics Hub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+<script type="text/javascript">
+    function initStory() {
+        var containerDiv = document.getElementById("tableauStory"),
+            url = "https://public.tableau.com/views/visualizinghousingmarkettrends_17720250614760/HousingTrendsStory",
+            options = {
+                hideTabs: true, // This hides the bottom sheet tabs, keeping only the STORY tabs at top
+                hideToolbar: false,
+                width: "100%",
+                height: "1000px",
+                onFirstInteractive: function () {
+                    console.log("Storyboard is ready.");
+                }
+            };
+        
+        // Remove existing content and initialize
+        containerDiv.innerHTML = "";
+        var viz = new tableau.Viz(containerDiv, url, options);
+    }
+
+    // Run on page load
+    document.addEventListener("DOMContentLoaded", initStory);
+</script>
+{% endblock %}

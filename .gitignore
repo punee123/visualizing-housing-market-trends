@@ -1,0 +1,39 @@
+# --- Python & Flask ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv310
+env/
+venv310/
+ENV/
+instance/
+.pytest_cache/
+*.db
+*.sqlite
+
+# --- Frontend & Styling ---
+# If you eventually use Node/Sass for your CSS
+node_modules/
+.sass-cache/
+*.css.map
+
+# --- OS & IDE Specific ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Project Specific Data ---
+# Exclude raw datasets if they are large
+data/*.csv
+data/*.xlsx
+!data/sample.csv  # Keep a sample file if needed
+
+# --- Tableau Specific ---
+# If you save local workbook files
+*.twb
+*.twbx
+*.tde
+*.hyper

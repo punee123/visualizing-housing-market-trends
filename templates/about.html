@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-5 bg-dark text-white text-center mt-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;">
+    <div class="container py-4">
+        <h1 class="display-5 fw-bold">Deep Dive into Housing Analytics</h1>
+        <p class="lead opacity-75">Uncovering the hidden variables that drive real estate value.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="card shadow-lg border-0 presentation-card mb-5">
+            <div class="row g-0">
+                <div class="col-md-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid h-100 object-fit-cover hover-zoom" alt="Apartment Building">
+                </div>
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h6 class="text-primary fw-bold text-uppercase mb-2">The Analysis</h6>
+                    <h2 class="fw-bold mb-4">Visualizing Housing Market Trends</h2>
+                    <p class="text-muted fs-5 mb-4">
+                        Understanding real estate isn't just about location; it's about the data behind the walls. We address the complex challenges of fluctuating sale prices by analyzing high-dimensional datasets.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="p-3 border-start border-4 border-primary bg-light rounded-end">
+                                <h4 class="fw-bold mb-0">20k+</h4>
+                                <small class="text-muted text-uppercase fw-bold">Records Analyzed</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 border-start border-4 border-success bg-light rounded-end">
+                                <h4 class="fw-bold mb-0">Dynamic</h4>
+                                <small class="text-muted text-uppercase fw-bold">Tableau Engine</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-top border-4 border-primary">
+                    <i class="fas fa-bullseye fa-2x text-primary mb-3"></i>
+                    <h5 class="fw-bold">The Goal</h5>
+                    <p class="text-muted">To decipher the intricate factors—from renovation years to neighborhood demand—that dictate final sale outcomes.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-top border-4 border-success">
+                    <i class="fas fa-microscope fa-2x text-success mb-3"></i>
+                    <h5 class="fw-bold">The Methodology</h5>
+                    <p class="text-muted">Utilizing comprehensive age distribution data and renovation history to uncover long-term equity growth patterns.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-top border-4 border-warning">
+                    <i class="fas fa-chess-knight fa-2x text-warning mb-3"></i>
+                    <h5 class="fw-bold">Strategic Value</h5>
+                    <p class="text-muted">Empowering investors and homebuyers with visual evidence to make high-stakes financial decisions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center py-5">
+            <h3 class="fw-bold mb-4">Powered by Modern Business Intelligence</h3>
+            <p class="text-muted mb-5 mx-auto" style="max-width: 700px;">Our workflow ensures data integrity from the moment a record is ingested to its final rendering in our interactive dashboards.</p>
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
